@@ -1,0 +1,34 @@
+How to use Git
+
+git config --global user.name = 'Pyae Hein'
+git config --global user.email = 'nnieheayp@yahoo.com'
+git config --global core.editor = 'nano'
+
+1 - git init							- add git to folder 
+2 - git add .							- same as taking photo ( ga : add one , gaa : add all )
+3 - git status							- checking git status ( gs )
+4 - git commit -m 'Initial commit'		- same as saving it ( gc )
+5 - git log								- show commit id log with changes ( gl )
+6 - git diff <filename>					- show different between git add and current 
+7 - git reset --hard <commit_id>		- reset wrong commit and change code to last commit (careful u will lost what u changed)
+8 - git reset --soft <commit_id>		- reverse to commit id but modified codes are still in there.
+9 - git commit --amend					- change last commit
+10 - git show <commit_id>				- show commit changes
+11 - git checkout -b <name>				- create new branch ( git checkout master : switch back to master )
+12 - git merge <branch_name>			- merge with master and branch
+13 - git branch -d <branch_name>		- delete branch ( use it after merge ) ( git branch : show all branches )
+14 - git branch -v						- show commits of all branches
+15 - git stash							- saved current branch files
+16 - git stash pop						- restore recent stashed data
+17 - git stash list						- show all list
+18 - git stash apply <stash_id>			- restore saved stash id's data				
+19 - git stash branch <new branch name>	- create new branch and restore recent stash data
+20 - git remote add origin <url.git>	- add git remote url
+21 - git push -u origin master			- git push to remote repo ( git push : we can use like that after first push )
+22 - git clone <url.git>				- clone git repo to pc
+23 - git rebase master					- use it when double fixing condition ( use in branch and before merge with master branch )
+24 - git rebase -i master				- use it when combining all commits to one ( create new branch and merge againg to master )
+25 - git reflog							- show everying what we did for this repo
+
+
+git add <<< saved ur current stable data. Then u can make change. After that u can look changed with >>> git diff
