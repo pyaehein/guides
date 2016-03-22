@@ -29,4 +29,4 @@ git config credential.helper store  / git --global config credential.helper stor
 22 - git clone <url.git>				- clone git repo to pc
 23 - git rebase master					- use it when double fixing condition ( use in branch and before merge with master branch )
 24 - git rebase -i master				- use it when combining all commits to one ( create new branch and merge againg to master )
-25 - git reflog							- show everying what we did for this repo
+25 - git reflog							- show everying what we did for this repo 
