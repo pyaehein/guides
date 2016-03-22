@@ -3,6 +3,7 @@ How to use Git
 git config --global user.name = 'Pyae Hein'
 git config --global user.email = 'nnieheayp@yahoo.com'
 git config --global core.editor = 'nano'
+git config credential.helper store  / git --global config credential.helper store
 
 1 - git init							- add git to folder 
 2 - git add .							- same as taking photo ( ga : add one , gaa : add all )
