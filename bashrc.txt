@@ -4,7 +4,7 @@ How to edit bashrc
 gitpushfunc() {
     	#do things with parameters like $1, $2 such as
 	git add .
-	git commit -m \'$1\'
+	git commit -m \'$@\'
 	git push
 }
 
