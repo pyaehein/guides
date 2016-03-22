@@ -1,13 +1,21 @@
 How to edit bashrc
 -sudo gedit ~/.bashrc
 
+gitpushfunc() {
+    	#do things with parameters like $1, $2 such as
+	git add .
+	git commit -m \'$1\'
+	git push
+}
+
 # Git Stuff
 alias ga='git add'
 alias gaa='git add .'
-alias gc='git commit -m '
-alias gp='git push '
+alias gcm='git commit -m '
+alias gp='git push'
 alias gs='git status'
 alias gl='git log'
+alias gcp=gitpushfunc
 
 # Git branch in prompt with color
 
