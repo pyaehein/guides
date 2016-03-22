@@ -1,0 +1,2 @@
+sudo dnf groupinstall "Virtualization"
+sudo dnf install qemu-img  libvirt libvirt-python libvirt-client

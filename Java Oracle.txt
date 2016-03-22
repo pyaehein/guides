@@ -1,0 +1,26 @@
+Install first from Fedy
+
+Use Java JDK latest version (/usr/java/latest)
+## java, javaws ##
+
+alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+alternatives --install /usr/bin/javaws javaws /usr/java/latest/jre/bin/javaws 200000
+
+## Install javac only if you installed JDK (Java Development Kit) package ##
+
+alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
+alternatives --install /usr/bin/jar jar /usr/java/latest/bin/jar 200000
+
+Use Java JRE latest version (/usr/java/latest)
+## java, javaws ##
+
+alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
+alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
+
+Check Java Version
+
+java -version
+javac -version
+javaws 
+
+source: http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/

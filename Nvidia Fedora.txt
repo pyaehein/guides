@@ -1,0 +1,16 @@
+Check nvidia support 
+/sbin/lspci | grep VGA
+
+Support Version Check
+ftp://download.nvidia.com/XFree86/Linux-x86_64/352.63/README/supportedchips.html
+
+Latest Version
+sudo dnf install akmod-nvidia "kernel-devel-uname-r == $(uname -r)"
+sudo dnf update -y
+
+For Old Devices
+dnf install akmod-nvidia-340xx "kernel-devel-uname-r == $(uname -r)"
+dnf update -y
+
+
+source: http://unix.stackexchange.com/questions/251629/how-to-install-nvidia-proprietary-drivers-on-fedora-23
