@@ -1,4 +1,4 @@
-How to edit bashrc
+How to edit bashrc  
 -sudo gedit ~/.bashrc
 
 gitpushfunc() {
@@ -8,7 +8,7 @@ gitpushfunc() {
 	git push
 }
 
-# Git Stuff
+# Git Stuffss
 alias ga='git add'
 alias gaa='git add .'
 alias gcm='git commit -m '
@@ -17,7 +17,7 @@ alias gs='git status'
 alias gl='git log'
 alias gcp=gitpushfunc
 
-# Git branch in prompt with color
+# Git branch in prompt with color with names
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
