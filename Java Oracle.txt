@@ -17,7 +17,23 @@ Use Java JRE latest version (/usr/java/latest)
 alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
 alternatives --install /usr/bin/javaws javaws /usr/java/latest/bin/javaws 200000
 
-Check Java Version
+## Set Jar and javac ##
+alternatives --set jar /usr/java/latest/bin/jar
+alternatives --set javac /usr/java/latest/bin/javac
+
+## Edit in .bashrc and root's .bashrc
+
+export PATH=/usr/java/latest/bin:/usr/java/latest/jre/bin   <<< Add this in Path
+
+export JAVA_HOME=/usr/java/latest/
+export JRE_HOME=/usr/java/latest/jre
+
+## Alternative java and javac
+
+alternatives --config java 				<<< /usr/java/latest/jre/bin/java
+alternatives --config javac
+
+## Check Java Version
 
 java -version
 javac -version
