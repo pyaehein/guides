@@ -1,0 +1,13 @@
+## System Recovery Restore ##
+
+1.plug in phone with pc ( must opened usb debugging )
+2.open PC's terminal ( And type below codes )
+3.sudo dnf install android-tools
+4.adb reboot bootloader
+5.su
+6.fastboot devices  <<<<  checking device work or not
+7.fastboot flash recovery your_recovery_image.img
+8.Done :D
+
+
+source: https://wiki.cyanogenmod.org/w/Doc:_fastboot_intro
