@@ -1,0 +1,18 @@
+## Add this in composer.json ## (You can change vendor for other packages)
+
+"post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize",
+            "mkdir -p public/css",
+            "mkdir -p public/js",
+            "cp -R vendor/twbs/bootstrap/dist/css public/",
+            "cp -R vendor/twbs/bootstrap/dist/js public/",
+            "cp -R vendor/components/jquery/*.js public/js/"
+        ]
+
+
+## Calling in laravel template ##
+
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+
+<script src="{{ asset('js/bootstrap.min.js') }}" ></script>        
