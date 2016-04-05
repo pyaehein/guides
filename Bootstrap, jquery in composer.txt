@@ -3,11 +3,11 @@
 "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize",
-            "mkdir -p public/css",
-            "mkdir -p public/js",
-            "cp -R vendor/twbs/bootstrap/dist/css public/",
-            "cp -R vendor/twbs/bootstrap/dist/js public/",
-            "cp -R vendor/components/jquery/*.js public/js/"
+            "mkdir -p public/cdn/css",
+            "mkdir -p public/cdn/js",
+            "cp -R vendor/twbs/bootstrap/dist/css public/cdn/",
+            "cp -R vendor/twbs/bootstrap/dist/js public/cdn/",
+            "cp -R vendor/components/jquery/*.js public/cdn/js/"
         ]
 
 

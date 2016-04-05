@@ -1,0 +1,31 @@
+1: sudo dnf install alien rpmrebuild
+
+2: alien chrome-remote-desktop_current_amd64.deb -r
+
+3: rpmrebuild -pe chrome-remote-desktop-36.0.1985.102-2.x86_64.rpm    <<<--- use for fix rpm
+
+Delete this lines from rpm. Search '%files' section remove all under lines that refer to already
+existing directories such as:
+
+%dir %attr(0755, root, root) "/"
+%dir %attr(0755, root, root) "/etc"
+%dir %attr(0755, root, root) "/etc/cron.daily"
+%dir %attr(0755, root, root) "/etc/init.d"
+%dir %attr(0755, root, root) "/etc/opt"
+%dir %attr(0755, root, root) "/etc/opt/chrome"
+%dir %attr(0755, root, root) "/etc/pam.d"
+%dir %attr(0755, root, root) "/opt"
+%dir %attr(0755, root, root) "/opt/google"
+%dir %attr(0755, root, root) "/usr"
+%dir %attr(0755, root, root) "/usr/share"
+%dir %attr(0755, root, root) "/usr/share/doc"
+
+Now write your changes and exit VI
+(by pressing Shift plus : and then wq and enter)
+
+It will ask about rebuild, press Y and enter.
+Now wait, it could take a couple of minutes without any progress notification.
+
+Finally, the file ~/rpmbuild/RPMS/x86_64/chrome-remote-desktop-36.0.1985.102-2.x86_64.rpm
+
+Now, install with dnf again :D
