@@ -1,0 +1,12 @@
+## Install Window's Steam with wine ##
+
+- add alias in .bashrc file
+
+alias steamwine="'/home/nnieheayp/.wine/drive_c/Program Files (x86)/Steam/Steam.exe'"
+
+
+- install window steam game like this from terminal
+
+steamwine steam://run/39120
+
+## Done ## 
