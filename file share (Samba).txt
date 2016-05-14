@@ -1,0 +1,42 @@
+## Requirement ##
+1.samba (file share server)
+2.ES File Manager (Android file Manager)
+
+
+## On Fedora ##
+
+
+sudo dnf -y install samba samba-client
+sudo chmod 777 -R /home/share
+sudo subl /etc/samba/smb.conf
+
+# line 90: change (Windows' default)
+workgroup = WORKGROUP
+
+# line 96: uncomment and change IP address you allow
+hosts allow = 127. 10.0.0. 192.168.2.
+
+# add follows to the end
+[Share]
+   path = /home/share
+   writable = yes
+   guest ok = yes
+   guest only = yes
+   create mode = 0777    <<<--- 0444 (Read Only)
+   directory mode = 0777
+   share modes = yes
+
+sudo smbpasswd -a <username>
+
+sudo systemctl start smb 
+sudo systemctl start nmb 
+sudo systemctl enable smb 
+sudo systemctl enable nmb
+
+
+## On Android ##
+Open ES File Manager
+Change to Network
+Scan
+
+Done
