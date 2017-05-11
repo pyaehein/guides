@@ -1,0 +1,40 @@
+1.Download Latest Openoffice zip
+
+2.Remove libreoffice
+sudo dnf --setopt=clean_requirements_on_remove=false remove libreoffice\*
+
+3.Install all RPMS from rmp folder
+sudo dnf install *.rpm
+
+4.Install desktop menu from desktop-integeration folder
+sudo dnf install redhat-menu.rpm
+
+5.Run in terminal
+openoffice4
+
+6.If got error 
+
+Do you have gtk2 libraries installed?
+Try the following on a terminal:
+
+~]$ ldd -v /opt/openoffice4/program/libvclplug_gtk.so
+
+In my system, this reports a missing library:
+
+...
+        libgdk_pixbuf_xlib-2.0.so.0 => not found
+...
+
+Find the package which provides this library, and install it:
+
+[root@localhost ~]# dnf whatprovides */libgdk_pixbuf_xlib-2.0.so.0
+Last metadata expiration check: 19:02:19 ago on Sun Jul 24 18:10:21 2016.
+gdk-pixbuf2-xlib-2.34.0-1.fc24.i686 : Additional library for using gdk-pixbuf with bare xlib
+Repo        : fedora
+
+gdk-pixbuf2-xlib-2.34.0-1.fc24.x86_64 : Additional library for using gdk-pixbuf with bare xlib
+Repo        : fedora
+
+[root@localhost ~]# dnf install gdk-pixbuf2-xlib
+
+7.Done
