@@ -30,3 +30,7 @@ git config credential.helper store  / git --global config credential.helper stor
 23 - git rebase master					- use it when double fixing condition ( use in branch and before merge with master branch )
 24 - git rebase -i master				- use it when combining all commits to one ( create new branch and merge againg to master )
 25 - git reflog							- show everying what we did for this repo
+
+26 - git submodule add https://github.com/nadminpanel/adminpanel
+27 - add new git pullall command to update all submodules
+git config --global alias.pullall '!git pull && git submodule update --init --recursive'
